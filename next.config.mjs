@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: false,
-    images:{
-        domains:['localhost']
+    images: {
+        domains: ['strapi-grocery-shop.onrender.com'],
     },
     env: {
-        API_URL: process.env.API_URL || 'http://localhost:1337',
+        API_URL: process.env.API_URL || 'https://strapi-grocery-shop.onrender.com',
     },
 };
 
