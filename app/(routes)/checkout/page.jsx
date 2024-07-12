@@ -62,8 +62,8 @@ function Checkout() {
         return totalAmount.toFixed(2);
       }
 
-      const onApprove = (data) => {
-        console.log(data);
+      const onApprovePayment = (data) => {
+        console.log(data, "data");
 
         const payload = {
             data: {
@@ -79,15 +79,15 @@ function Checkout() {
                 }
         }
         GlobalApi.createOrder(payload, jwt).then(resp => {
-            console.log(resp, "order");
             toast('Order Placed Successfully!');
-            cartItemList.forEach((item, index) => {
-                GlobalApi.deleteCartItem(item.id).then(resp => {
-
+            cartItemList.forEach((item) => {
+                GlobalApi.deleteCartItem(item.id, jwt).then(resp => {
+                    console.log(resp);
                 })
             })
             router.replace('/order-confirmation');
           })
+        
       }
 
      
@@ -115,14 +115,15 @@ function Checkout() {
                     <div className='p-4 flex flex-col gap-4'>
                         <h2 className='flex font-bold justify-between'>SubTotal : <span>${subTotal}</span></h2>
                         <hr></hr>
-                        <h2 className='flex justify-between'>Delivery : <span>$15.00</span></h2>
+                        <h2 className='flex justify-between'>Delivery : <span>$10.00</span></h2>
                         <h2 className='flex justify-between'>Tax (9%): <span>${(totalCartItem*0.9).toFixed(2)}</span></h2>
                         <hr></hr>
                         <h2 className='flex font-bold justify-between'>Total : <span>${calculateTotalAmount()}</span></h2>
-                        {/* <Button onClick={() => onApprove({paymentId: 123})}>Payment <ArrowBigRight /></Button> */}
+                        <Button disabled={!(userName&&email&&address&&zip)} onClick={() => onApprovePayment({paymentId: 123})}>Payment <ArrowBigRight /></Button>
                         {totalAmount > 15 && <PayPalButtons style={{ layout: "horizontal" }} 
                         disabled={!(userName&&email&&address&&zip)}
-                        onApprove={onApprove}
+                        onClick={() => onApprovePayment({paymentId: 123})}
+                        onApprove={onApprovePayment}
                         createOrder={(data, actions) => {
                             return actions.order.create({
                                 purchase_units: [
@@ -130,9 +131,9 @@ function Checkout() {
                                         amount: {
                                             value: totalAmount,
                                             currency_code: 'USD'
-                                        }
-                                    }
-                                ]
+                                        },
+                                    },  
+                                ],
                             });
                         }}
                         />}

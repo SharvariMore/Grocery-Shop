@@ -107,7 +107,9 @@ function Header() {
   return (
     <div className='p-5 shadow-sm flex justify-between'>
         <div className='flex items-center gap-8'>
-            <Image src='/logo.png' alt='logo' width={300} height={200} />
+            <Link href={'/'}>
+              <Image src='/logo.png' alt='logo' width={300} height={200} className='cursor-pointer' />
+            </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger>
                   <h2 className='hidden md:flex gap-2 items-center boeder rounded-full p-5 px-10 bg-slate-200 cursor-pointer'>
@@ -169,7 +171,9 @@ function Header() {
             <DropdownMenuContent>
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <Link href={'/'}>
+                <DropdownMenuItem>Profile</DropdownMenuItem>
+              </Link>
               <Link href={'/my-order'}>
                 <DropdownMenuItem>My Order</DropdownMenuItem>
               </Link> 

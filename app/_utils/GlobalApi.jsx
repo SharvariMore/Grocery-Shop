@@ -1,7 +1,7 @@
 const {default : axios} = require("axios")
 
 const axiosClient = axios.create({
-    baseURL: 'http://192.168.1.37:1337/api'
+    baseURL: 'http://192.168.101.200:1337/api'
 })
 
 const getCategory = () => axiosClient.get('/categories?populate=*')
@@ -69,13 +69,18 @@ const createOrder = (data, jwt) => axiosClient.post('/orders', data, {
     }
 })
 
-const getMyOrder = (userId, jwt) => axiosClient.get('/orders?filters[userId][$eq]='+userId+'&populate[orderItemList][populate][product][populate][images]=url').then(resp => {
+const getMyOrder = (userId, jwt) => axiosClient.get('/orders?filters[userId][$eq]='+userId+'&populate[orderItemList][populate][product][populate][images]=url', { headers: {
+    Authorization: 'Bearer ' + jwt
+    }
+}).then(resp => {
     const response = resp.data.data;
     const orderList = response.map(item => ({
         id: item.id,
         totalOrderAmount: item.attributes.totalOrderAmount,
         paymentId: item.attributes.paymentId,
-        orderItemList: item.attributes.orderItemList
+        orderItemList: item.attributes.orderItemList,
+        createdAt: item.attributes.createdAt,
+        status: item.attributes.status
     }));
     return orderList;
 })
