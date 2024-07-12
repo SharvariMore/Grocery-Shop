@@ -5,7 +5,7 @@ function MyOrderItem({orderItem}) {
   return (
     <div className='w-[60%]'>
         <div className='grid grid-cols-5 mt-3 items-center'>
-            <Image src={process.env.NEXT_PUBLIC_BACKEND_BASE_URL+
+            <Image src={process.env.API_URL+
             orderItem.product.data.attributes.images.data[0].attributes.url} 
             width={80} height={80} alt='orderItem'
             className='bg-gray-100 p-5 rounded-md border'/>

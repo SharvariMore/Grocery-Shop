@@ -122,7 +122,7 @@ function Header() {
                     <Link href={'/products-category/'+category.attributes.name} key={index}>
                       <DropdownMenuItem className='flex gap-2 items-center cursor-pointer'>
                         <Image src={
-                          process.env.NEXT_PUBLIC_BACKEND_BASE_URL+
+                          process.env.API_URL+
                           category?.attributes?.icon?.data?.[0]?.attributes?.url
                           }
                           unoptimized={true} alt='icon' width={27} height={27}/>

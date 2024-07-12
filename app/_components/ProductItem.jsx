@@ -15,7 +15,7 @@ import ProductItemDetail from './ProductItemDetail'
 function ProductItem({product}) {
   return (
     <div className='p-2 md:p-6 flex flex-col items-center justify-center gap-3 border rounded-lg hover:scale-110 hover:shadow-lg transition-all ease-in-out'>
-        <Image src={process.env.NEXT_PUBLIC_BACKEND_BASE_URL+
+        <Image src={process.env.API_URL+
                     product?.attributes?.images?.data[0]?.attributes?.url}
                     width={500} height={200} 
                     alt={product.attributes.name}

@@ -9,7 +9,7 @@ function TopCategoryList({categoryList, selectedCategory}) {
                 <Link href={'/products-category/'+category.attributes.name} key={index} 
                 className={`flex flex-col items-center bg-green-50 gap-2 p-3 rounded-lg group cursor-pointer hover:bg-green-200 w-[150px] min-w-[100px]
                 ${selectedCategory==category.attributes.name&&'bg-green-600 text-white'}`}>
-                    <Image src={process.env.NEXT_PUBLIC_BACKEND_BASE_URL+
+                    <Image src={process.env.API_URL+
                         category?.attributes?.icon?.data?.[0]?.attributes?.url}
                         alt='category' 
                         width={50} height={50}
