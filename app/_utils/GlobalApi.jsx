@@ -1,7 +1,7 @@
 const {default : axios} = require("axios")
 
 const axiosClient = axios.create({
-    baseURL: 'https://strapi-grocery-shop.onrender.com/api'
+    baseURL: 'https://strapi-grocery-shopp.onrender.com/api'
 })
 
 const getCategory = () => axiosClient.get('/categories?populate=*')
