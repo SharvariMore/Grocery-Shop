@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Grocery Shop
 
-## Getting Started
+Developed a Next.js application for a Grocery App, leveraging Strapi CMS for API integration, authentication, and database services.
 
-First, run the development server:
+![image](https://github.com/user-attachments/assets/bbb3eca3-a11f-4092-8df8-8005c40a336e)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![image](https://github.com/user-attachments/assets/4964410b-7f68-4f74-bc32-e1b3492b4cf8)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![image](https://github.com/user-attachments/assets/f19b6eba-68c3-4cd8-a7fa-7120809f3d45)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+![image](https://github.com/user-attachments/assets/efca9496-5e59-4434-bed7-445e7aba7dd6)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![image](https://github.com/user-attachments/assets/c367856b-e5c2-4f0d-86bf-f6d9fb831bbd)
 
-## Learn More
+![image](https://github.com/user-attachments/assets/05065b7e-fdcb-48c9-b1cf-57024d646bb7)
 
-To learn more about Next.js, take a look at the following resources:
+![image](https://github.com/user-attachments/assets/370cf367-4425-4639-a05d-53912fae1f64)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![image](https://github.com/user-attachments/assets/08235817-babc-47c1-9ea8-bec628cdc2d3)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![image](https://github.com/user-attachments/assets/c0ba65ec-194c-4671-8ffa-6f8f6272d067)
 
-## Deploy on Vercel
+![image](https://github.com/user-attachments/assets/839f15e0-b751-4645-b88b-084a4795f8fd)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![image](https://github.com/user-attachments/assets/cd78b420-04d9-4380-9965-3c7a725ffb8a)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![image](https://github.com/user-attachments/assets/a3a9bc55-3871-4e05-b98c-e988fe3d7f9b)
+
+
+
+
+
+
+
+
+
+
+
