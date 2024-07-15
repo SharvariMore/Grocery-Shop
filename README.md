@@ -1,5 +1,7 @@
 ## Grocery Shop
 
+Developed a Next.js application for a Grocery App, leveraging Strapi CMS for API integration, authentication, and database services.
+
 ![image](https://github.com/user-attachments/assets/bbb3eca3-a11f-4092-8df8-8005c40a336e)
 
 ![image](https://github.com/user-attachments/assets/4964410b-7f68-4f74-bc32-e1b3492b4cf8)
