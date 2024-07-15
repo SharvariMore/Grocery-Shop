@@ -148,7 +148,12 @@ function Header() {
             <SheetHeader>
               <SheetTitle className='bg-primary text-white font-bold text-lg p-2 mt-5'>My Cart</SheetTitle>
               <SheetDescription>
-                <CartItemList cartItemList={cartItemList} onDeleteItem={onDeleteItem}/>
+                {/* <CartItemList cartItemList={cartItemList} onDeleteItem={onDeleteItem}/> */}
+                {cartItemList.length === 0 ? (
+                  <p className="text-center text-gray-500 mt-4">No items in cart.</p>
+                ) : (
+                  <CartItemList cartItemList={cartItemList} onDeleteItem={onDeleteItem} />
+                )}
               </SheetDescription>
             </SheetHeader>
             <SheetClose asChild>
