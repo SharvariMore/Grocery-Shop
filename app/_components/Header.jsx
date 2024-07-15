@@ -150,7 +150,7 @@ function Header() {
               <SheetDescription>
                 {/* <CartItemList cartItemList={cartItemList} onDeleteItem={onDeleteItem}/> */}
                 {cartItemList.length === 0 ? (
-                  <p className="text-center text-gray-500 mt-4">No items in cart.</p>
+                  <p className="text-center text-gray-600 mt-4 font-semibold">No items in cart!</p>
                 ) : (
                   <CartItemList cartItemList={cartItemList} onDeleteItem={onDeleteItem} />
                 )}
